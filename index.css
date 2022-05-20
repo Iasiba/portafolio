@@ -1,0 +1,463 @@
+
+* {
+  box-sizing : border-box;
+  margin     : 0;
+  padding    : 0;
+}
+
+  *, 
+  ::before,
+  ::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+    background    :#242635;  
+  }
+  .menu {
+    width: 30px;
+    color: white;
+    background-color: #242635;
+
+    border        : 2px solid #34B0BE;
+    font-family   : monospace;
+    display       : flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size     : 1.5rem;
+    padding-right       :  0rem;
+    padding-left   : 1.6rem;
+    line-height:70%;
+    margin: 20px 0px 0px 20px;
+    border-radius: 3px;
+}
+.menu :hover {
+  color:#34B0BE;
+  }
+  .pages a{
+    color: white;
+    
+  }
+.navbar{
+    width: 100%;
+    height: 60px;
+ /*
+display: inline-block;
+   display: flex;*/
+
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+}
+.hamburguer{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.pages{
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+
+}
+.pages a:hover{
+  color: #34B0BE;
+}
+.checkbox{
+  display: none;
+}
+
+@media screen and (min-width: 800px){
+  .navbar{
+    align-items: center;
+    background-color: #242635;
+    display: flex;
+  }
+  .menu{
+    visibility: hidden;
+    display: none;
+  }
+  .photo{
+    max-width: 300px;
+    max-height: 300px;
+  }
+  .pages a{
+    padding: 14px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  /*
+  .pages{
+    visibility: hidden;
+    display: none;
+  }*/
+  .navbar{
+    height: 60px;
+    width: 200px;
+    gap: 0px;
+    justify-content: flex-end;
+    /*flex-direction: row-reverse;*/
+  
+  }
+  .pages a{
+    padding: 20px;
+  }
+  .pages{
+    padding: 0%;
+    margin-top: 10px;
+    line-height: 0px;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    border: #34B0BE solid 1px;
+    margin-left: 20px;
+  }
+  .pages:before {
+    content: ' ';
+    display: block;
+  position: absolute;
+    width: 85%;
+    height: 330%;
+   z-index: -1;
+    opacity: 0.9;
+    background-color: #242635;
+  }
+  .checkbox:checked~.pages{
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu {
+    position: sticky;
+    top: 30px;
+  }
+}
+
+
+.contenido{
+  min-width: 700px;;
+  width: 80vw;
+  height: 60vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+
+  color: white;
+  display: flex;
+  
+  justify-content:center ;
+  margin: 0 auto;
+
+}
+.contenido:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+ 
+  width: 50%;
+  height: 50%;
+ z-index: -1;
+  opacity: 0.1;
+  background-image: url("./assets/img/Portafolio 4/xx-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  justify-content: center;
+}
+
+.soy{
+  color: white;
+  font-size: 40px;
+}
+.nombre{
+  color: #34B0BE;
+  font-size: 80px;
+  font-weight: 300;
+}
+.ocupacion{
+  color: white;
+  font-size: 25px;
+}
+.espacio1{
+  width: 250px;
+  height: 100%;
+}
+.espacio2{
+  width: 250px;
+  height: 100%;
+  align-items: center;
+}
+.photo{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  border-radius: 60%;
+  bottom: 40px;
+}
+.experiencia1{
+  color: #34B0BE;
+  font-size: 23px;
+}
+.experiencia2{
+  color: white;
+  font-size: 23px;
+}
+
+.redes{
+  width: auto;
+  height: 80px;
+  display: flex;
+  gap: 20px;
+ 
+  
+}
+.redes .backred{
+  width: 30px;
+  height: 30px;
+  gap:10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D1CECA;
+}
+.backred img{
+  width: 85%;
+  height: 85%;
+}
+.foot-icons{
+  width:350px;
+  height: 80px;
+  padding: 20px;
+
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #353437;
+  border-radius: 20px;
+
+}
+
+.backredes{
+  background-color: #D1CECA;
+  border-radius: 10px;
+  width: 80px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+}
+.serv {
+  height: 300px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 0  auto; 
+}
+.servi{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+
+
+}
+.servi div{
+  background-color: white;
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+
+  background-image: url("./assets/img/Portafolio 4/Vectores/Ellipse 14.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.puntuacion{
+  background-color: white;
+  width: 70%;
+  height: 10px;
+  align-items: center;
+  border-radius: 4px;
+  margin: 0 auto;
+  
+}
+.puntuacion .inte{
+  background-color: #34B0BE;
+  width: 80%;
+  height: 100%;
+  border-radius: 4px;
+}
+.puntuacion .web{
+  background-color: #34B0BE;
+  width: 60%;
+  height: 100%;
+  border-radius: 4px;
+}
+.puntuacion .UX{
+  background-color: #34B0BE;
+  width: 70%;
+  height: 100%;
+  border-radius: 4px;
+}
+h2{
+  color: #34B0BE;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.about{
+  height: 300px;
+  max-width: 70%;
+  margin: 40px auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.habilidades{
+  color: white;
+  height: auto;
+  width: 90%;
+  margin: 40px auto;
+
+  justify-content: space-between;
+  text-align: center;
+}
+.hab{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.Myport{
+  height: 450px;
+  width: 80%;
+  margin: 0 auto;
+  
+}
+.port{
+  max-width: 600px;
+  height: 400px;
+  display: flex;
+ 
+  margin: 0 auto;
+  gap: 20px;
+  overflow-x: scroll;
+}
+.port::-webkit-scrollbar{
+  display: none;
+}
+
+.port div{
+  width: 200px;
+  height: 300px;
+  display: contents;
+  background-color: white;
+
+}
+
+
+footer{
+  height: 60px;
+  width: 100%;
+  text-align: center;
+}
+h3{
+  color: #34B0BE;
+}
+.contacto{
+  height: 500px;
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+  
+}
+.celu{
+  width: 70%;
+  height: 170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+}
+.celu div{
+  height: 170px;
+  width: 170px;
+  background-color: white;
+  background-image: url("./assets/img/Portafolio 4/Vectores/Ellipse 14.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.ema{
+  width: 70%;
+  height: 170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  
+}
+.ema div{
+  height: 170px;
+  width: 170px;
+  background-color: white;
+  background-image: url("./assets/img/Portafolio 4/Vectores/Ellipse 14.svg") ;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 900px){
+  .serv {
+    max-width: 60%;
+  }
+  .servi{
+    gap: 30px;
+  }
+  .Myport{
+    width: 70%;
+    margin: 0 auto;
+  }
+  .ema{
+    width: 60%;
+  }
+  .celu{
+    width: 60%;
+  }
+
+  .Myport{
+    height: 400px;
+    width: 100%;
+  }
+  .port{
+    width: 100%;
+    height: 90%;
+  }
+  
+  .port div{
+    width: 30%;
+    height: 80%;
+  }
+}
+
